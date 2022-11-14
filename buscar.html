@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <title>Buscar</title>
+    <link rel="shortcut icon" type="image/png" href="Querule1.png"/>
+    <script src="codigo.js"></script>
+</head>
+
+<body data-pagina="bodyBusqueda">
+    
+   <header id="inicioPag">
+       <img src="Querule1.png" alt="Imagen de prueba">
+       <h1>Querulé</h1>
+       <h2>Web para la compra y venta de articulos de segunda mano</h2>
+   </header>
+    
+       
+   <nav>
+    <label for="chkMenu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="chkMenu">
+        <ul id="menu">
+            <li></li>
+        </ul>
+   </nav>
+   
+    <div class="filtros" >
+        <form  name="formuBusc" onsubmit="return busco(0);">
+            
+            
+            <h3>Buscar por</h3>
+            
+            <div class="inicia">
+                <label class="fil">Texto</label>
+                <input class="cajita" type="text" name="t" id="texto" autofocus placeholder="palabras del texto">
+            </div>
+            
+            
+             <div class="inicia">
+                <label class="fil">Vendedor</label>
+                <input class="cajita" type="text" name="v" id="vendedor" >
+            </div>
+            
+             
+
+            <div class="inicia" >
+                <!-- <label for="cat" class="fil" >Categoria</label> -->
+                <label class="fil" >Categoria</label>
+
+                <input class="cajita" type="text" name="c" id="categoria" placeholder="id de la categoria">
+               
+            </div>
+                
+             <div class="inicia">
+                <label class="fil">Precio</label>
+                <input class="cajita" name="pd" id="desde" placeholder="Desde">-
+                <input class="cajita"  name="ph"  id="hasta" placeholder="Hasta">
+            </div>
+            
+           
+            <label class="ordena" >Artículos seguidos
+                <!--<input class="cajita" type="text" name="seguidos" id="seguidos" >-->
+                <input type="checkbox" name="seguidos" id="seguidos">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="ordena" >Artículos en venta
+                <input type="checkbox"  name="mios" id="enVenta">
+                <!--<input class="cajita" type="text" name="enVenta" id="enVenta" >-->
+                <span class="checkmark"></span>
+            </label>
+
+            <h3>Nº página y artículos</h3>
+            <div class="inicia">
+                <label class="fil">Paginación</label>
+                <input class="cajita" id="pag" placeholder="página">-
+                <input class="cajita"  id="artpg" placeholder=" artículos por página">
+            </div>
+                
+            
+            
+            <!-- <h3>Filtrar búsqueda</h3>
+            
+            <label class="ordena">Ordenar descendentemente
+                <input type="radio" checked name="ascDesc" id="desc">
+                <span class="checkmark"></span>
+            </label>
+            
+            <label class="ordena">Ordenar ascendentemente
+                <input type="radio" checked name="ascDesc" id="asc">
+                <span class="checkmark"></span>
+            </label> -->
+           
+        <input class="busque" type="submit" id="bBuscar" value="Buscar">
+        </form>
+    
+    
+    </div>  
+    
+    
+   <section id="busc">
+       <h2>Resultados de la búsqueda</h2>
+       <div>
+            
+           
+        </div>
+   </section>
+    
+   <ul class="paginacion">
+        <li><a class="icon-angle-circled-left" onclick="pagunoBuscar();"></a></li>
+		<li><a class= "icon-angle-left" onclick="pagmenosBuscar();"></a></li>
+		<li><p id="paginacionBuscar">1</p></li>
+		<li><a class= "icon-angle-right" onclick="pagmasBuscar();"></a></li>
+		<li><a class="icon-angle-circled-right" onclick="pagultimaBuscar();"></a></li>
+
+</ul>
+    
+   <footer>
+        <div>
+            <p>&copy; PCW <time datetime="2020-02">2020</time></p>
+       </div>
+       <div>
+        <a href="acerca.html">CONTACTO</a>
+       </div>
+       <div>
+        <a class="icon-up-big" href="#inicioPag">Volver arriba</a>
+       </div>
+       
+   </footer>
+   <script>tomaMenu();</script>
+   <script>leerURL();</script>
+</body>
+</html>

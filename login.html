@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <title>LogIn</title>
+    <link rel="shortcut icon" type="image/png" href="Querule1.png"/>
+    <script src="codigo.js"></script>
+    <script>
+		if(sessionStorage['usuario']){
+			location.href = 'index.html';
+		}
+	</script>
+</head>
+
+    
+<body data-pagina="bodyLogin">
+<!-- cabecera -->    
+   <header id="inicioPag">
+       <img src="Querule1.png" alt="Imagen logo">
+       <h1>Querulé</h1>
+       <h2>Web para la compra y venta de articulos de segunda mano</h2>
+   </header>
+      
+   <nav>
+    <label for="chkMenu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="chkMenu">
+        <ul id="menu">
+            <li></li>
+        </ul>
+   </nav>
+    
+ <!-- medio -->   
+   
+       <div class="contenedor">
+           <form onsubmit="return hacerLogin(this);">
+               <h2>Iniciar sesión</h2>
+               <hr>
+               
+               <div class="inicia">
+                   <label for="login" class="campo">Usuario</label>
+                   <input class="caja" type="text" name="login" id="login" required autofocus>
+               </div>
+               
+               <div class="inicia">
+                   <label class="campo">Contraseña</label>
+                    <input class="caja" type="password" name="pwd" id="pwd" required>
+
+                </div>
+               
+               <input class="entro" type="submit" value="enviar" id="btnModal" onclick="hacerLogin();">
+               <!---<button class="entro">Iniciar</button>-->
+               
+               <a href="registro.html" class="notengo">No tengo cuenta</a>
+               
+           </form>
+
+        <div id="tvesModal" class="modalContainer">
+            <div class="modal-content">
+                <span class="close">×</span>
+                <img src="Querule1.png" alt="Imagen logo">
+                <h2>LogIn</h2>
+                <div id="POPUP">
+                   
+
+                </div>    
+            </div>
+        </div>
+
+
+        <div id="tvesModalNO" class="modalContainer">
+            <div class="modal-contentNO">
+                <span class="closeNo" id="NO">×</span>
+                <img src="Querule1.png" alt="Imagen logo">
+                <h2>LogIn</h2>
+                <div id="POPUPNO">
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div id="tvesModalLO" class="modalContainer">
+            <div class="modal-contentLO">
+                <img src="Querule1.png" alt="Imagen logo">
+                <h2>LogOut</h2>
+                <div id="popCierra"></div>
+                <footer ><button id="cierraMsesion">Aceptar</button></footer>>
+                
+            </div>
+        </div>
+
+        
+
+        </div>
+       
+   
+    
+ <!-- FOOTER -->    
+   <footer>
+        <div>
+            <p>&copy; PCW <time datetime="2020-02">2020</time></p>
+       </div>
+       <div>
+        <a href="acerca.html">CONTACTO</a>
+       </div>
+       <div>
+        <a class="icon-up-big" href="#inicioPag">Volver arriba</a>
+       </div>
+ </footer>
+ <script>tomaMenu();</script>
+ <!--<script>hacerLogin();</script>-->
+ 
+</body>
+</html>

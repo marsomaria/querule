@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <title>Articulo</title>
+    <link rel="shortcut icon" type="image/png" href="Querule1.png"/>
+    <script src="codigo.js"></script>
+</head>
+<body>
+    
+<!--cabecera-->
+   <header id="inicioPag">
+       <img src="Querule1.png" alt="Imagen de prueba">
+       <h1>Querulé</h1>
+       <h2>Web para la compra y venta de articulos de segunda mano</h2>
+   </header>
+    
+       
+   <nav>
+        <label for="chkMenu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="chkMenu">
+        <ul id="menu">
+            <li></li>
+        </ul>
+   </nav>
+   
+    
+<section>
+
+<!--medio-->
+
+    <form class= "contenedordos"> 
+        <ul class="paginacion">
+            <!-- <span id="nomenos"></span> -->
+            <li ><a class="icon-left-open" onclick="fotomenos();"></a> </li>
+            <li id="pa"></li>
+            <li > <a class="icon-right-open-1" onclick="fotomas();"></a> </li>
+            <!-- <span id="nomas"></span> -->
+        </ul>
+        
+        <div id="fotacas" >
+
+
+
+        </div>
+        
+        
+        
+        
+        
+        <div id="art">
+
+            
+           
+            <script>fotosA();</script>
+        </div>
+	</form>
+    
+    <form class="contenedorPreguntas" id="lasPreguntas">
+
+        <h3>Preguntas</h3>
+        <hr>
+            <div>
+
+
+
+
+               
+            </div>
+            
+            
+    </form>
+    
+    <div id="formuMensaje">
+        
+        <script>formularioPregunta();</script>
+    </div>
+
+    </section>
+    
+    
+   <footer>
+        <div>
+            <p>&copy; PCW <time datetime="2020-02">2020</time></p>
+       </div>
+       <div>
+        <a href="acerca.html">CONTACTO</a>
+       </div>
+       <div>
+        <a class="icon-up-big" href="#inicioPag">Volver arriba</a>
+       </div>
+       
+   </footer>
+
+
+   <script>tomaMenu();</script>
+   <script>mostrarArticulo();</script>
+   
+   <script>sacaPreguntas();</script>
+   <script>fotosA();</script>
+   <script>sacaVendedor();</script>
+</body>
+</html>

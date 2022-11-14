@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <title>NuevoArticulo</title>
+    <link rel="shortcut icon" type="image/png" href="Querule1.png"/>
+    <script src="codigo.js"></script>
+    <script>
+        if(!sessionStorage['usuario']){
+            location.href = 'index.html';
+        }
+    </script>
+</head>
+
+
+
+
+<body data-pagina="bodyNuevo">
+    <!-- cabecera -->  
+   <header id="inicioPag">
+       <img src="Querule1.png" alt="Imagen de prueba">
+       <h1>Querulé</h1>
+       <h2>Web para la compra y venta de articulos de segunda mano</h2>
+   </header>
+    
+    
+   <nav>
+    <label for="chkMenu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="chkMenu">
+        <ul id="menu">
+            <li></li>
+        </ul>
+   </nav>
+   
+    <!-- medio -->  
+    <div class= "contenedor" id="formNUEVO">
+        
+        <h2>Nuevo articulo</h2>
+        <hr>
+            
+        
+                <!--  -->
+                <form onsubmit="return subirNuevoA(this);">
+                    <div id="picBODY" >
+                        <label  id="pic" >Fotos del artículo  <span class="otrafotillo" onclick="anyadirFoto();" onkeyup="anyadirConEnter(event);">+</span> </label>
+                        
+                            <!--  -->
+                            <div id="cajafotillos" >
+                                <img id="fot" src="vacia.jpg" alt="imagen por defecto">
+                                
+        
+                                <input type="file" style="display: none;" onchange="cargarImagen(this);" id="fichero" name="fichero" accept="image/png, .jpeg, .jpg, image/gif">
+                                <button onclick="this.parentNode.querySelector('input').click();"><span class="icon-folder-open">Seleccionar</span> </button>
+                                <button class="masFOTOS"><span class="icon-trash-empty" onclick="eliminarFoto2();"> </span></button>
+                                <!-- <ul><li><a class="icon-trash-empty" onclick="eliminarFoto();"></a></li></ul> -->
+        
+                                <!-- <input type="file" name="fichero" id="fich"  onchange="cargarFoto(this);"> -->        
+                            </div>
+        
+                            <div id="zonaF" >
+                            </div>
+                            
+                           
+                                
+                            
+                            
+                    </div>
+                    
+                    <div class="fila">
+                        <label for="nomb" class="etiqueta">Nombre</label>
+                        <input class= "caja" type="text" name="nombre" id="nomb" required maxlength="100" autofocus placeholder="máximo 100 caracteres">
+                    </div>
+                    <div class="fila">
+                        <label for="descr" class="etiqueta">Descripción</label>
+                        <textarea rows='4' cols='40' class= "caja" name="descripcion" required id="descr" maxlength="300" placeholder="máximo 300 caracteres"></textarea>
+                    </div>
+                    
+                    <div class="fila">
+                        <label for="cate" class="etiqueta" >Categoria</label>
+                        <input class= "caja" id="cate" type="text" name="categoria" list ="category"  required placeholder="máximo 100 caracteres">
+                        <datalist id="category">
+                            
+                            
+            
+                        </datalist>
+                    </div>
+                    
+                    <div class="fila">
+                        <label for="prec" class="etiqueta">Precio<span class="icon-euro"></span></label>
+                        <input class= "caja" type="number" name="precio" id="prec" required>
+                    </div>
+                    
+
+
+
+                
+
+            
+                        <input type="reset" class="lim" name="limpiar" value= "Limpiar formulario" onclick="limpiarNUEVO();">
+                    
+                         
+
+                        <input class= "entro" type="submit" value="Subir" >
+
+
+                </form>
+
+
+
+
+                
+    </div>
+    
+    
+    
+    
+<!-- FOOTER -->
+    
+   <footer>
+        <div>
+            <p>&copy; PCW <time datetime="2020-02">2020</time></p>
+       </div>
+       <div>
+        <a href="acerca.html">CONTACTO</a>
+       </div>
+       <div>
+        <a class="icon-up-big" href="#inicioPag">Volver arriba</a>
+       </div>
+       
+   </footer>
+   <script>tomaMenu();</script>
+   <script>pedirCategorias();</script>
+</body>
+</html>

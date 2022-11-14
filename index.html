@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <title>Querulé</title>
+    <link rel="shortcut icon" type="image/png" href="Querule1.png" />
+    <script src="codigo.js"></script>
+</head>
+<body data-pagina="ultimos" >
+    
+<!-- cabecera -->
+   <header id="inicioPag">
+       <img src="Querule1.png" alt="Imagen de prueba">
+       <h1>Querulé</h1>
+       <h2>Web para la compra y venta de articulos de segunda mano</h2>
+   </header>
+    
+   <nav>
+        <label for="chkMenu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="chkMenu">
+        <ul id="menu">
+            <li></li>
+        </ul>
+   </nav>
+
+   
+   
+   <div class="brapida" id="busqueda">
+    
+    <input class="cajita" type="text" name="busca" id="busca" onkeyup="anyadirConEnter(event);">
+    <span class="bB"  onclick="buscaloINDEX();"> <span class="icon-search-1" onkeyup="anyadirConEnter(event);" onclick="buscaloINDEX();"> </span> </span>
+    
+</div>
+
+
+      
+<!-- medio -->
+       
+<section >  
+    <h2>ÚLTIMOS ARTICULOS AÑADIDOS</h2>
+       
+       
+       
+       
+           
+           <div>
+           </div>
+        
+
+   </section>
+
+   
+
+
+
+    
+    <ul class="paginacion">
+		<li><a class="icon-angle-circled-left" onclick="paguno();"></a></li>
+		<li><a class= "icon-angle-left" onclick="pagmenos();"></a></li>
+        <!-- <p>1</p> -->
+        <li id="pa"></li>
+		<li><a class= "icon-angle-right" onclick="pagmas();"></a></li>
+		<li><a class="icon-angle-circled-right" onclick="pagultima();"></a></li>
+	</ul>
+    
+    
+    
+   <footer>
+        <div>
+            <p>&copy; PCW <time datetime="2020-02">2020</time></p>
+       </div>
+       <div>
+        <a href="acerca.html">CONTACTO</a>
+       </div>
+       <div>
+        <a class="icon-up-big" href="#inicioPag">Volver arriba</a>
+       </div>
+       
+   </footer>
+    
+   <script>tomaMenu();</script>
+   <script>dameArticulos();</script>
+</body>
+</html>
